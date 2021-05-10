@@ -1,0 +1,85 @@
+DATASET_STYLE
+#Style datasets allow the customization of branch and leaf label colors and styles.
+
+#lines starting with a hash are comments and ignored during parsing
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file (except in the SEPARATOR line, which uses space).
+#SEPARATOR TAB
+#SEPARATOR SPACE
+SEPARATOR COMMA
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL,example style
+
+#dataset color (can be changed later)
+COLOR,#ffff00
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#each dataset can have a legend, which is defined below
+#for each row in the legend, there should be one shape, color and label
+#shape should be a number between 1 and 6:
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+#LEGEND_TITLE,Dataset legend
+#LEGEND_SHAPES,1,2,3
+#LEGEND_COLORS,#ff0000,#00ff00,#0000ff
+#LEGEND_LABELS,value1,value2,value3
+
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+#the following fields are required for each node:
+#ID,TYPE,WHAT,COLOR,WIDTH_OR_SIZE_FACTOR,STYLE,BACKGROUND_COLOR
+
+# TYPE: can be either 'branch' or 'label'. 'branch' will apply customizations to the tree branches, while 'labels' apply to the leaf text labels
+# WHAT: can be either 'node' or 'clade', only relevant for internal tree nodes. 'Node' will apply the customization only to a single node, while 'clade' will apply to all child nodes as well.
+# COLOR: can be in hexadecimal, RGB or RGBA notation. If RGB or RGBA are used, dataset SEPARATOR cannot be comma.
+# WIDTH_OR_SIZE_FACTOR: for type 'branch', specifies the relative branch width, compared to the global branch width setting.
+#                        for type 'label', specifies the relative font size, compared to the global font size
+# STYLE: for type 'branch', can be either 'normal' or 'dashed'
+#         for type 'label', can be one of 'normal', 'bold', 'italic' or 'bold-italic'
+# BACKGROUND_COLOR (optional): only relevant for type 'label', specifies the color of the label background. The value is optional.
+
+
+DATA
+
+#Example
+Selaginella moellendorffii,label,node,#000000,1,italic,#FFFFFF
+Picea abies,label,node,#000000,1,italic,#FFFFFF
+Ginkgo biloba,label,node,#000000,1,italic,#FFFFFF
+Amborella trichopoda,label,node,#000000,1,italic,#FFFFFF
+Nymphaea colorata,label,node,#000000,1,italic,#FFFFFF
+Spirodela polyrhiza,label,node,#5AA2D8,1,italic,#FFFFFF
+Phalaenopsis equestris,label,node,#5AA2D8,1,italic,#FFFFFF
+Musa acuminata,label,node,#5AA2D8,1,italic,#FFFFFF
+Sorghum bicolor,label,node,#5AA2D8,1,italic,#FFFFFF
+Oryza sativa,label,node,#5AA2D8,1,italic,#FFFFFF
+Persea americana,label,node,#71C086,1,italic,#FFFFFF
+Piper nigrum,label,node,#71C086,1,italic,#FFFFFF
+Aristolochia fimbriata,label,node,#71C086,1,italic,#FFFFFF
+Cinnamomum kanehirae,label,node,#71C086,1,italic,#FFFFFF
+Liriodendron chinense,label,node,#71C086,1,italic,#FFFFFF
+Aquilegia coerulea,label,node,#FDB39D,1,italic,#FFFFFF
+Papaver somniferum,label,node,#FDB39D,1,italic,#FFFFFF
+Nelumbo nucifera,label,node,#FDB39D,1,italic,#FFFFFF
+Vitis vinifera,label,node,#FDB39D,1,italic,#FFFFFF
+Solanum lycopersicum,label,node,#FDB39D,1,italic,#FFFFFF
+Populus trichocarpa,label,node,#FDB39D,1,italic,#FFFFFF
+Arabidopsis thaliana,label,node,#FDB39D,1,italic,#FFFFFF
+
+
+
+
+
